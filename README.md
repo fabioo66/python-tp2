@@ -11,7 +11,7 @@ Este trabajo practico cuenta con 4 estructuras pertenecientes a un equipo de hoc
 - Goles evitados
 - Goles y asistencias
 
-El alumno debe ser capaz de implementar una estructura que agrupe toda esa información y desarrollar funciones para realizar las siguientes operaciones:
+El alumno debe ser capaz de implementar una estructura que agrupe toda esa información y desarrollar funciones para obtener los siguientes datos:
 - El goleador del equipo y cantidad de goles
 - El nombre del jugador mas influyente
 - El promedio de goles por partido del equipo
