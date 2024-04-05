@@ -65,10 +65,10 @@ def goals_average(goals):
     return total/25
 
 def goal_scorer_average(players):
-    """This function receives the goal_scorer and
-    returns his/her goal average"""
-    name = goal_scorer(players)
+    """This function receives a tuple that
+    contains name and goals. Returns his/her goal average"""
+    player = goal_scorer(players)
 
-    goals = players[name][0]
+    goals = player[1]
 
     return goals/25 
