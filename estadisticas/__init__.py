@@ -14,8 +14,9 @@ def constructor(names, goals, goals_avoided, assists):
     return players
 
 def goal_scorer(players):
-    """This function returns the name of the goal_scorer
-    of the team"""
+    """This function returns a tuple
+    with the name of the scorer 
+    of the team and the number of goals"""
 
     max_goals = -1
 
@@ -23,7 +24,10 @@ def goal_scorer(players):
         if stats[0] > max_goals:
             max_goals = stats[0]
             goal_scorer = player
-    return goal_scorer
+
+    tuple = (goal_scorer, max_goals)
+
+    return tuple
 
 def average(players):
     """This functions return a list of tuples with the name 
