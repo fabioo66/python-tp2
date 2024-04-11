@@ -33,26 +33,17 @@ def average(players):
     """This functions return a list of tuples with the name 
     and the average of the players based in goals, goals_avoided
     and assists"""
-    average_list = []
-
-    for player, stats in players.items():
-        average = (stats[0] * 1.5) + (stats[1] * 1.25) + stats[2]
-        average_list.append((player, average))
-
-    return average_list
+    
+    return [(player, (stats[0] * 1.5) + (stats[1] * 1.25) + stats[2]) for player, stats in players.items()]
 
 def mvp(players):
     """This function receives the list of tuples
     and returns the player who had the best performance 
     on the field"""
     average_list = average(players)
-    max = -1
-
-    for player in average_list:
-        if player[1] > max:
-            max = player[1]
-            name = player[0]
-    return name
+    
+    most_influential = max(average_list, key = lambda x : x[1])
+    return most_influential[0]
 
 def goals_average(goals):
     """This function receives the list of 
@@ -60,15 +51,11 @@ def goals_average(goals):
     average of goals per match taking
     into account that 25 matches were played"""
 
-    total = sum(goals)
-    
-    return total/25
+    return sum(goals)/25
 
 def goal_scorer_average(players):
     """This function receives a tuple that
     contains name and goals. Returns his/her goal average"""
     player = goal_scorer(players)
-
-    goals = player[1]
-
-    return goals/25 
+    
+    return player[1]/25
