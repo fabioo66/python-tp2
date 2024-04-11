@@ -18,16 +18,9 @@ def goal_scorer(players):
     with the name of the scorer 
     of the team and the number of goals"""
 
-    max_goals = -1
+    scorer, goals= max(players.items(), key = lambda x : x[1][0])
 
-    for player, stats in players.items():
-        if stats[0] > max_goals:
-            max_goals = stats[0]
-            goal_scorer = player
-
-    tuple = (goal_scorer, max_goals)
-
-    return tuple
+    return scorer, goals[0]
 
 def average(players):
     """This functions return a list of tuples with the name 
