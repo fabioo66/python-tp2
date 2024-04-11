@@ -22,6 +22,8 @@ El alumno debe ser capaz de implementar una estructura que agrupe toda esa infor
 
 ##
 ```bash
+git clone https://github.com/fabioo66/python-tp2
+cd python-tp2
 python3.11 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
